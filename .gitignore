@@ -1,0 +1,7 @@
+data/
+*.laz
+*.las
+*.zip
+*.7z
+*.tar
+*.tar.gz
