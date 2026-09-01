@@ -1,0 +1,31 @@
+RailCloud-HdF v1.0 Dataset License
+
+The RailCloud-HdF v1.0 dataset is made available under the Creative Commons
+Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0).
+
+You may share and adapt the dataset for non-commercial purposes, provided that
+you give appropriate credit, provide a link to the license, and indicate if
+changes were made. No additional restrictions may be applied that legally
+restrict others from doing anything the license permits.
+
+The dataset is intended for academic and research use, including benchmarking;
+evaluation of segmentation, classification, and object-detection methods; and
+extension or improvement of the annotations and dataset. This intended-use
+statement is descriptive. The permissions and restrictions are governed by
+CC BY-NC 4.0, and commercial use is prohibited.
+
+License deed and legal code:
+https://creativecommons.org/licenses/by-nc/4.0/
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Attribution request:
+
+RailCloud-HdF v1.0, Mahdi Abid, Mathis Teixeira, Ankur Mahtani, and Thomas
+Laurent. Please also cite the associated VISAPP 2024 paper:
+https://doi.org/10.5220/0012394800003660
+
+The Zenodo DOI identifies the exact archived dataset version:
+https://doi.org/10.5281/zenodo.22115147
+
+This dataset license is distinct from the associated paper's publication
+license. The paper is published under CC BY-NC-ND 4.0.

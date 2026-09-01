@@ -1,7 +1,14 @@
+# Large source data and generated Zenodo packages
 data/
+zenodo_upload/
 *.laz
 *.las
 *.zip
+*.zip.tmp
 *.7z
 *.tar
 *.tar.gz
+
+# Python cache files produced while validating the release
+__pycache__/
+*.py[cod]

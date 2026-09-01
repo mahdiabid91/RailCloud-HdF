@@ -1,0 +1,133 @@
+{
+  "title": "RailCloud-HdF: A Large-Scale Point Cloud Dataset for Railway Scene Semantic Segmentation",
+  "version": "1.0.0",
+  "version_label": "v1.0",
+  "resource_type": "dataset",
+  "creators": [
+    {
+      "name": "Mahdi Abid",
+      "orcid": "0000-0001-5504-3014"
+    },
+    {
+      "name": "Mathis Teixeira"
+    },
+    {
+      "name": "Ankur Mahtani",
+      "orcid": "0000-0003-2738-4705"
+    },
+    {
+      "name": "Thomas Laurent"
+    }
+  ],
+  "affiliation": "FCS Railenium, F-59300 Famars, France",
+  "description": "RailCloud-HdF is a large-scale, densely annotated LiDAR point-cloud dataset for semantic segmentation of railway scenes. It contains 5,353 LAZ scans covering eight railway lines and 267.52 km in the Hauts-de-France region of northern France.",
+  "keywords": [
+    "LiDAR",
+    "point cloud",
+    "railway scenes",
+    "semantic segmentation",
+    "deep learning",
+    "Hauts-de-France"
+  ],
+  "file_format": {
+    "extension": ".laz",
+    "description": "Compressed LAS",
+    "las_version": "1.2",
+    "point_data_format": 3
+  },
+  "coordinate_reference_system": {
+    "horizontal": {
+      "coordinates": [
+        "X",
+        "Y"
+      ],
+      "name": "ETRS89-FRA [RGF93 v1] / CC50",
+      "former_name": "RGF93 v1 / CC50",
+      "epsg": 3950,
+      "unit": "metre"
+    },
+    "vertical": {
+      "coordinate": "Z",
+      "name": "NGF-IGN69 height",
+      "epsg": 5720,
+      "unit": "metre"
+    },
+    "las_xyz_scale_factor": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "coordinate_quantization": "1 mm"
+  },
+  "recommended_tools": [
+    {
+      "name": "Plas.io",
+      "purpose": "Quick browser-based LAZ visualization",
+      "url": "https://plas.io/"
+    },
+    {
+      "name": "laspy",
+      "purpose": "Python access to coordinates, intensity, classification, color, GPS time, and other LAS/LAZ dimensions",
+      "url": "https://laspy.readthedocs.io/"
+    },
+    {
+      "name": "pylas",
+      "purpose": "Python access to LAS/LAZ point data in existing pylas workflows"
+    }
+  ],
+  "intended_uses": [
+    "Benchmarking point-cloud methods",
+    "Evaluating semantic segmentation, classification, or object-detection methods",
+    "Segmenting additional objects and annotating new classes",
+    "Cleaning, extending, improving, or completing the dataset"
+  ],
+  "usage_note": "RailCloud-HdF is intended for academic and research use. All uses must comply with CC BY-NC 4.0, including attribution and the prohibition on commercial use.",
+  "approximate_size": {
+    "display": "approximately 48 GB",
+    "source_laz_bytes": 50077713861,
+    "source_laz_gb_decimal": 50.078,
+    "source_laz_gib": 46.639
+  },
+  "number_of_scans_or_tiles": 5353,
+  "total_distance_km": 267.52,
+  "approximate_number_of_points": 8060300000,
+  "computed_number_of_points_from_headers": 8060277695,
+  "number_of_acquisitions": 8,
+  "zenodo_packaging": {
+    "number_of_acquisition_archives": 8,
+    "supporting_archive": "RailCloud-HdF_v1.0_supporting_files.zip",
+    "supporting_archive_contents": [
+      "splits/",
+      "scripts/"
+    ],
+    "total_number_of_archives": 9
+  },
+  "split_counts": {
+    "train": 4068,
+    "validation": 1017,
+    "test": 268,
+    "total": 5353
+  },
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  },
+  "associated_paper": {
+    "title": "RailCloud-HdF: A Large-Scale Point Cloud Dataset for Railway Scene Semantic Segmentation",
+    "conference": "VISAPP 2024",
+    "year": 2024,
+    "pages": "159-170",
+    "doi": "10.5220/0012394800003660",
+    "url": "https://doi.org/10.5220/0012394800003660"
+  },
+  "citation_message": "If you use RailCloud-HdF in your research, please cite the associated VISAPP 2024 paper. The Zenodo DOI identifies this archived dataset release and can be used to reference the exact dataset version.",
+  "release_date": "2024-02-27",
+  "zenodo_doi": "10.5281/zenodo.22115147",
+  "zenodo_url": "https://doi.org/10.5281/zenodo.22115147",
+  "contact": {
+    "name": "Mahdi Abid",
+    "email": "mahdiabid91@gmail.com",
+    "institutional_email": "mahdi.abid@railenium.eu"
+  }
+}

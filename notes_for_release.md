@@ -6,11 +6,12 @@
 
 Dataset name: RailCloud-HdF  
 Version: v1.0  
+Release date: 2024-02-27
 Dataset type: LiDAR point-cloud dataset for railway scene semantic segmentation  
 Primary file format: compressed LAS files, `.laz`  
 Approximate release size: approximately 48 GB  
 Intended archive: Zenodo  
-Zenodo DOI: [TO COMPLETE after DOI reservation or publication]
+Zenodo DOI: 10.5281/zenodo.22115147
 
 ## Associated paper
 
@@ -38,24 +39,30 @@ Affiliation in the associated paper: FCS Railenium, F-59300 Famars, France.
 ## Contact
 
 Contact: mahdiabid91@gmail.com  
-Alternative / institutional contact: [TO COMPLETE if needed]
+Alternative / institutional contact: mahdi.abid@railenium.eu
 
 ## License
 
-Dataset license: [TO COMPLETE]
+Dataset license: CC BY-NC 4.0
 
-Important: do not assume that the dataset license is identical to the paper license. The paper is published under CC BY-NC-ND 4.0, but the dataset license must be confirmed separately before publication.
-
-Possible choices to confirm:
-- CC BY 4.0
-- CC BY-NC 4.0
-- another license required by Railenium or project partners
+Important: do not assume that the dataset license is identical to the paper license. The paper is published under CC BY-NC-ND 4.0.
 
 ## Permission
 
 Permission to publish the dataset has been obtained.
 
-Details of the permission / approving entity: [TO COMPLETE if useful internally]
+Details of the permission / approving entity: Railenium authorized sharing the dataset publicly. People can modify, clean, extend, annotate, or improve the dataset and redistribute their version, provided the use is non-commercial and they give proper attribution.
+
+## Intended research uses
+
+The dataset is intended for academic and research use, including:
+
+- benchmarking point-cloud methods;
+- evaluating new methods for semantic segmentation, classification, or object detection;
+- segmenting additional objects to annotate new classes;
+- cleaning, extending, improving, or otherwise completing the dataset.
+
+All use and redistribution must comply with CC BY-NC 4.0. These examples describe the intended research scope; the license terms govern the permissions and restrictions.
 
 ## Dataset description
 
@@ -113,6 +120,15 @@ Format details from the paper:
   - GPS time
 
 Each point cloud is saved in one `.laz` file.
+
+Coordinate reference systems:
+
+- planimetry (`X`, `Y`): EPSG:3950, ETRS89-FRA [RGF93 v1] / CC50 (formerly named RGF93 v1 / CC50);
+- altimetry (`Z`): EPSG:5720, NGF-IGN69 height;
+- CRS coordinate unit: metre;
+- LAS XYZ scale factor: `0.001 0.001 0.001`, corresponding to 1 mm coordinate quantization.
+
+For quick browser visualization, a `.laz` file can be loaded in [Plas.io](https://plas.io/). Point attributes such as scaled 3D coordinates, intensity, classification, color, and GPS time can be extracted with the Python `laspy` library (or `pylas` in existing workflows).
 
 ## Dataset organization
 
@@ -201,7 +217,19 @@ Important benchmark note:
 
 The paper states that the `Unclassified` class was not included in the performance evaluation because it includes outliers, other structures and objects, and has high intra-class variation. Therefore, 8 classes instead of 9 were used during training and testing in the baseline experiments.
 
-Numeric class IDs: [TO VERIFY from the LAS classification field / scripts]
+Numeric class IDs, verified from the classification histograms in all 5,353 `info/*.txt` files:
+
+| ID | Class |
+|---:|---|
+| 0 | Unclassified |
+| 1 | Ground |
+| 2 | Vegetation |
+| 3 | Building |
+| 4 | Catenary pole |
+| 5 | Rail |
+| 6 | Structure |
+| 7 | Catenary wire |
+| 8 | Level crossing gate (`LCG`) |
 
 ## Benchmark task
 
@@ -290,6 +318,24 @@ ACQ_xxx_Name/
   cloud/
 ```
 
+The upload should also contain the supporting archive:
+
+```text
+RailCloud-HdF_v1.0_supporting_files.zip
+```
+
+This archive preserves the public release utilities and original split layout:
+
+```text
+splits/
+  laz_files.csv
+  train_ds.csv
+  valid_ds.csv
+  test_ds.csv
+scripts/
+  *.py
+```
+
 The release should also include:
 
 ```text
@@ -321,4 +367,4 @@ Use this wording:
 
 If you use RailCloud-HdF in your research, please cite the associated VISAPP 2024 paper. The Zenodo DOI identifies this archived dataset release and can be used to reference the exact dataset version.
 
-Do not invent missing information. Use `[TO COMPLETE: ...]` placeholders where needed.
+Do not invent missing information; explicitly document any fields that still require completion.

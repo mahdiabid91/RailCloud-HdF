@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use RailCloud-HdF in your research, please cite the associated VISAPP 2024 paper."
+title: "RailCloud-HdF v1.0"
+type: dataset
+version: 1.0.0
+date-released: "2024-02-27"
+doi: 10.5281/zenodo.22115147
+repository: "https://doi.org/10.5281/zenodo.22115147"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22115147
+    description: "The archived RailCloud-HdF v1.0 dataset release on Zenodo."
+abstract: >-
+  A large-scale, densely annotated LiDAR point-cloud dataset for railway
+  scene semantic segmentation, covering 267.52 km in Hauts-de-France.
+authors:
+  - family-names: Abid
+    given-names: Mahdi
+    email: mahdiabid91@gmail.com
+    orcid: "https://orcid.org/0000-0001-5504-3014"
+  - family-names: Teixeira
+    given-names: Mathis
+  - family-names: Mahtani
+    given-names: Ankur
+    orcid: "https://orcid.org/0000-0003-2738-4705"
+  - family-names: Laurent
+    given-names: Thomas
+license: CC-BY-NC-4.0
+keywords:
+  - point cloud dataset
+  - railway scenes
+  - semantic segmentation
+  - deep learning
+  - LiDAR
+preferred-citation:
+  type: conference-paper
+  title: "RailCloud-HdF: A Large-Scale Point Cloud Dataset for Railway Scene Semantic Segmentation"
+  authors:
+    - family-names: Abid
+      given-names: Mahdi
+    - family-names: Teixeira
+      given-names: Mathis
+    - family-names: Mahtani
+      given-names: Ankur
+    - family-names: Laurent
+      given-names: Thomas
+  year: 2024
+  conference:
+    name: "19th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISIGRAPP 2024)"
+  collection-title: "Proceedings of the 19th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications - Volume 2: VISAPP"
+  start: 159
+  end: 170
+  publisher:
+    name: SciTePress
+  doi: 10.5220/0012394800003660
+  isbn: "978-989-758-679-8"
